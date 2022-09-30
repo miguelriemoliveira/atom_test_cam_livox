@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="kl_calib_robot">
+
+<link name="world"/>
+
+<link name="base_link"/>
+
+<link name="livox_laser"/>
+
+<link name="camera"/>
+
+<link name="camera_frame">
+</link>
+
+<link name="livox_frame">
+</link>
+
+<joint name="pointgrey_joint" type="fixed">
+<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+<parent link="camera_frame" />
+<child link="camera" />
+</joint>
+
+<joint name="livox_joint" type="fixed">
+<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+<parent link="livox_laser" />
+<child link="livox_frame" />
+</joint>
+
+<joint name="livox_joint2" type="fixed">
+<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+<parent link="base_link" />
+<child link="livox_laser" />
+</joint>
+
+<joint name="pointgrey_joint2" type="fixed">
+<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+<parent link="base_link" />
+<child link="camera_frame" />
+</joint>
+
+<joint name="base joint" type="fixed">
+<origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+<parent link="world" />
+<child link="base_link" />
+</joint>
+
+</robot>
+
+
