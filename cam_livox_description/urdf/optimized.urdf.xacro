@@ -17,12 +17,12 @@
     <child link="livox_frame"/>
   </joint>
   <joint name="livox_joint2" type="fixed">
-    <origin xyz="0.0 0.0 0.0" rpy="0.0 -0.0 0.0"/>
+    <origin xyz="-0.138509550939093 -0.14812476102621244 -0.11587870037831646" rpy="-0.08809249754098708 -0.07531422556760353 0.02032795602279055"/>
     <parent link="base_link"/>
     <child link="livox_laser"/>
   </joint>
   <joint name="pointgrey_joint2" type="fixed">
-    <origin xyz="-1.6472768038511276e-08 -0.283184289932251 0.0" rpy="-1.623335435506995 0.013712477877955436 -1.5110624192324817"/>
+    <origin xyz="5.5775305151087125e-05 -0.28316645381084515 2.7764232883309163e-06" rpy="-1.6233243896348808 0.013706912715343992 -1.511068403806931"/>
     <parent link="base_link"/>
     <child link="camera_frame"/>
   </joint>
